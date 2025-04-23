@@ -37,13 +37,16 @@ class PromptRequest(BaseModel):
     nearby_place: Optional[str] = None
     max_tokens: Optional[int] = 150
     temperature: Optional[float] = 0.7
+    top_p: Optional[float] = 0.8  # Add top-p sampling parameter
+    top_k: Optional[int] = 50
 
 # Load model
 try:
     logger.info("Loading model...")
     tokenizer = AutoTokenizer.from_pretrained(
         "HuggingFaceH4/zephyr-7b-alpha",
-        padding_side="left"
+        padding_side="left",
+        truncation_side="left"
     )
     tokenizer.pad_token = tokenizer.eos_token
     
@@ -96,10 +99,15 @@ async def ask_zephyr(request: PromptRequest):
                 **inputs,
                 max_new_tokens=request.max_tokens,
                 temperature=request.temperature,
+                top_p=request.top_p,
+                top_k=request.top_k,
                 do_sample=True,
                 pad_token_id=tokenizer.eos_token_id,
                 return_dict_in_generate=True,  # Ensure dictionary output
-                output_scores=True
+                output_scores=True,
+                use_cache=True,  # Enable KV cache
+                repetition_penalty=1.1,  # Slightly reduce repetition
+                num_beams=1,  # Disable beam search for faster generation
             )
         
         new_tokens = outputs.sequences[0, inputs.input_ids.shape[1]:]
