@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 os.environ["HF_HOME"] = "D:/huggingface_models/huggingface"
 
-# Quantization config
+# Quantization config.
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_compute_dtype=torch.float16,
