@@ -1,0 +1,16 @@
+--index-url https://download.pytorch.org/whl/cu118
+--extra-index-url https://pypi.org/simple
+--extra-index-url https://pypi.ngc.nvidia.com
+
+torch
+torchvision
+torchaudio
+transformers
+accelerate
+sentencepiece
+bitsandbytes
+SpeechRecognition
+pyaudio
+fastapi
+uvicorn
+pyttsx3
