@@ -24,6 +24,8 @@ Here’s a screenshot of the **Location-Aware Voice-Enabled Assistant** web app 
 
 ![Web App Screenshot](assets/assistant.png)
 
+> **Note:** The coordinates for Gateway of India in the image are not the real ones. To ensure the **GeoAssistant** works correctly, I saved my **live coordinates** as "Gateway of India" in the `locations.json` file (since my house is not a tourist spot). This way, when it fetched my real-time location, it displayed "Gateway of India" with the corresponding description. You can add any other location instead of Gateway of India for testing or deployment purposes. 🗺️📍
+
 ---
 
 ## 📂 File Descriptions
