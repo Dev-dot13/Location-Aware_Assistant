@@ -1,12 +1,12 @@
-# 📍🎙️ Location-Aware Voice-Enabled Tourist Assistant
+# 🌍🎙️ GeoAssistant: Location-Aware Voice-Enabled Tourist Assistant
 
-A Progressive Web App (PWA) designed to function as a **location-aware, voice-enabled assistant** for tourist spots. It detects the user's **GPS location**, identifies nearby landmarks, and responds with **voice-guided information** using a **Zephyr-7B Alpha-powered chatbot** hosted via FastAPI.
+**GeoAssistant** is a Progressive Web App (PWA) designed to function as a **location-aware, voice-enabled assistant** for tourist spots. It detects the user's **GPS location**, identifies nearby landmarks, and responds with **voice-guided information** using a **Zephyr-7B Alpha-powered chatbot** hosted via FastAPI.
 
 ---
 
 ## 📝 Project Overview
 
-This project is a proof-of-concept for a smart assistant that can:
+GeoAssistant is a proof-of-concept **smart assistant** that can:
 
 - Automatically detect when a user is near a tourist destination
 - Provide spoken prompts and suggestions
@@ -22,7 +22,7 @@ This project is a proof-of-concept for a smart assistant that can:
 
 Here’s a screenshot of the **Location-Aware Voice-Enabled Assistant** web app in action:
 
-
+![Web App Screenshot](assets/assistant.png)
 
 ---
 
